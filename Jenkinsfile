@@ -20,13 +20,13 @@ pipeline {
     }
     stage('Docker Build') {
       steps {
-        sh '/usr/bin/docker build -t sra123456/dev:latest .'
+        sh '/usr/bin/docker build -t pavan9999/dev:bank-customer .'
       }
     }
     stage('Push image') {
       steps {
-        withDockerRegistry([credentialsId: 'docker-hub', url: "https://index.docker.io/v1/"]) {
-          sh '/usr/bin/docker push sra123456/dev:latest'
+        withDockerRegistry([credentialsId: 'Docker-Hub', url: "https://index.docker.io/v1/"]) {
+          sh '/usr/bin/docker push pavan9999/dev:bank-customer'
         }
       }
     }
