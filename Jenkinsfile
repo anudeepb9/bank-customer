@@ -2,7 +2,7 @@ pipeline {
   agent any
   tools { 
         maven 'Maven'
-        java 'JAVA'
+        jdk 'JAVA'
   }
   stages {
     stage('Clone repository') {
